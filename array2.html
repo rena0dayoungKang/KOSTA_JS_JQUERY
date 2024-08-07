@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr1 = [10, 20, 30];
+        var arr2 = [...arr1]; //전개연산자 (얕은복사)
+
+        arr1[0] = 100;
+
+        console.log(arr1);
+        console.log(arr2);
+
+        var arr3 = [1, 2, 3];
+        var arr4 = [...arr3, 4, 5];
+        console.log(arr3);
+        console.log(arr4);
+
+        var acc1 = { id: 100, name: 'hong', balance: 10000 }
+        var acc2 = { ...acc1, name: 'son', grade: 'VIP' };
+        //나머지는 복사하고 name만 바꾸고, 없는 grade를 추가할것이다
+        console.log(acc1)
+        console.log(acc2)
+
+        function change(acc, key, value) {
+            return { ...acc, [key]: value }
+        }
+
+        acc1 = change(acc1, "balance", 200000);
+        console.log(acc1);
+
+        acc1 = change(acc1, "name", 'park');
+        console.log(acc1);
+
+        //forEach
+        var array = [{ id: 100, name: 'hong', age: 10 }, { id: 200, name: 'song', age: 25 }, { id: 300, name: 'tong', age: 30 }];
+        array.forEach(function (item, index) {
+            console.log(`id:${item.id},name:${item.name},age:${item.age}`);
+        })
+
+        //find
+        var song = array.find((item) => item.name == 'song')
+        console.log(song);
+
+        //filter
+        var adult = array.filter(item => item.age >= 20)
+        console.log(adult);
+
+        //map
+        var agePlus = array.map(item => ({ ...item, age: item.age + 1 }))
+        console.log(agePlus);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let accs = [
+            { id: 1001, name: "홍길동", balance: 1000000, grade: 'VIP' },
+            { id: 1002, name: "김길동", balance: 2000000, grade: 'Gold' },
+            { id: 1003, name: "송길동", balance: 3000000, grade: 'Silver' },
+            { id: 1004, name: "차길동", balance: 4000000, grade: '' },
+            { id: 1005, name: "박길동", balance: 5000000, grade: '' },
+        ]
+        //먼저 배열 형태로 저장함
+        let accstr = accs.map(acc => `<tr><td>${acc.id}</td><td>${acc.name}</td><td>${acc.balance}</td><td>${acc.grade}</td>`)
+        let accstrstr = '';
+        accstr.forEach(str => {
+            accstrstr += str;
+        });
+        window.onload = function () {
+            let tbody = document.querySelector('table>tbody');
+            tbody.innerHTML = accstrstr;
+        }
+
+    </script>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>계좌번호</th>
+                <th>이름</th>
+                <th>잔액</th>
+                <th>등급</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+
+</html>

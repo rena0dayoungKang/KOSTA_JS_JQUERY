@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bublleSort(arr, compare) {
+            for(var i = 0; i < arr.length-1; i++) {
+                for(var j = 0; j < arr.length - i - 1; j++) {
+                    if(compare(arr[j],arr[j+1])>0) {
+                        var temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+        }
+
+        let array = [3,1,50,7,5];
+        console.log(array);
+
+        var asc = (n,m) => n-m;
+        bublleSort(array, asc);
+        console.log(array);
+
+        var desc = (n,m) => m-n;
+        bublleSort(array, desc);
+        console.log(array);
+
+        //콜백함수 : 정의는 내가 하고 bubblesort를 호출 시키는 것 
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

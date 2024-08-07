@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = 'hong';
+        var age = 20;
+        var person1 = [{name:'hong', age:30},{name:'hong', age:10},{name:'hong', age:40}];
+        var info = `이름:${name}, 나이:${age}`;
+        console.log(info);
+        
+        var infot = `<table border='1'><tr><td>${name}</td><td>${age}</td></tr></table>`;
+        var infot2 = `이름:<b>${name}</b>, 나이:<b>${age}</b>`;
+        //document.write(infot2);
+
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

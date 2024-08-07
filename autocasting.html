@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(""||0);  //0출력 
+        console.log("str"||10);  //str출력
+        //자바스크립트의 or 연산자
+        //앞에 것이 "str" 이라면 true인데 자동으로 "str"이라는 문자열(데이터) 값으로 캐스팅됨.
+        
+        var a = prompt("value1");
+        var b = prompt("value2");
+        console.log(a||b);
+        //a가 거짓일 때 b처리, a가 참이면 b처리 안됨, if(a==true) a else b
+
+        console.log(a&&b); 
+        //a가 참일 경우에만 b처리, if(a==true) b와 같다
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

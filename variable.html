@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // document.write("Hello Javascript!!");
+        // alert("Hello Javascript!!");
+        console.log("Hello Javascript!"); //개발자 도구console에서만 볼 수 있다. font에서 디버깅
+
+        var radius; //변수의 선언
+        radius = 10; //변수에 값을 넣는 순간 타입이 정해진다
+        var pi = 3.14;
+        console.log(2*radius*pi);
+
+        let var1;
+        const var2 = 20; //final과 같은 const. 반드시 선언하고 초기화 해야한다
+        //var2 = 30;  error. const변수는 변경할 수 없다
+        
+        var str = 'hong'; //자바스크립트는 큰따옴표와 작은따옴표를 구분하지 않는다. 
+        console.log(typeof radius); //number타입
+        console.log(typeof pi); //number타입
+        console.log(typeof str); //string타입
+
+        function fun() {} //function타입
+        console.log(typeof fun);
+
+        var arr = [];  //object타입
+        console.log(typeof arr);
+
+        var obj = {name:'hong', age:30};  //object타입
+        console.log(typeof obj);
+
+        var b = true;   //boolean타입
+        console.log(typeof b);
+
+        var n;  //undefined타입 : 아직 데이터를 넣지 않은 변수타입
+        console.log(typeof n);
+
+        var nl = null; //object타입
+        console.log(typeof nl);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

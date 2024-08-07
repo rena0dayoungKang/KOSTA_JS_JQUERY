@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // string => number  : Number()
+        var m = "6" + "3";
+        var n = "6" / "3";
+        console.log(m); //63출력 - 더하기 연산자는 자동형변환 안해준다
+        console.log(n); //2출력
+
+        var x = prompt("숫자입력");
+        var y = prompt("숫자입력");
+        
+    
+        console.log(x+y);  //1020출력
+        console.log(+x+(+y)); //30출력
+
+        //명시적 형변환
+        var res = Number(x)+Number(y);
+        console.log(res);
+
+        var res2 = (+x) + (+y);
+        console.log(res2);
+        
+
+        // boolean => string  :  String()
+        var value = true;
+        console.log(typeof value);
+        console.log(String(value)); //true출력됨
+
+        // number => boolean  : Boolean()
+        console.log(Boolean(1));  //true
+        console.log(Boolean(0));  //false
+        console.log(Boolean(-1)); //true
+        console.log(Boolean(100)); //true
+
+        // string => boolean  : Boolean()
+        console.log(Boolean("str")); //true
+        console.log(Boolean("")); //false
+        console.log(Boolean("0")); //true
+        console.log(Boolean(" ")); //true
+
+        console.log(Boolean(null)); //false
+        console.log(Boolean(undefined)); //false
+        console.log(Boolean(NaN)); //false
+
+        // Boolean() => false가 되는 것들
+        // Boolean(0)
+        // Boolean("")
+        // Boolean(Null)
+        // Boolean(undefined)
+        // Boolean(NaN)
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

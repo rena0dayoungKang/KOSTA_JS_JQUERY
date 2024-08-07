@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        console.log("" + 1 + 0); //10  //10
+        console.log("" - 1 + 0);  //-10  //-1
+        //빼기는 무조건 숫자로 형변환
+
+        console.log(true + false); //truefalse //1
+        //true는 넘버타입으로 바뀌면 1 false는 0
+
+        console.log(6 / "3"); //2   //2
+        console.log("2" * "3"); //6   //6
+        console.log(4 + 5 + "px"); //9px  //9px
+        console.log("$" + 4 + 5); //$45   //$45
+        console.log("4" - 2); //4-2   //2
+        //빼기는 숫자로 형변환
+
+        console.log("4px" - 2); //4px-2  //NaN
+        //숫자로 바꾸는 과정에서 오류가 나면서 Not a Number
+
+        console.log(7 / 0); //false   //Infinity
+        //0으로 나누면 무한대가 되버려서 infinity
+
+        console.log("  -9  " + 5); //  -9  5   //  -9  5
+        console.log("  -9  " - 5); //  -9  -5  //-14
+        //빼기라서 숫자로 형변환 되면서 스페이스가 없어진다.
+
+        console.log(Number(null)); //0 
+        console.log(null + 1); //1  //1
+
+        console.log(Number(undefined)); //NaN
+        console.log(undefined + 1); //1  //NaN
+
+        console.log(Number(" ")); //0
+        console.log("  \t \n" - 2); //  \t \n -2   //-2
+        //탭과 엔터도 스페이스 취급이 된다. 
+
+
+        //?? : null과 undefined, 숫자 0을 구분지어 다뤄야 할 때 사용
+        var a, b;
+        var x = a ?? b; // a || b 과 다름 (즉, 0을 거짓으로 판단하지 않음)
+        //위를 풀어쓰면 x = (a !== null && a !== undefined) ? a : b;
+        //a가 null이 아니면서 undefined가 아니라면 a, 그 외에는 b
+
+        var firstName = null;
+        var lastName = null;
+        var nickName = "바이올렛";
+        console.log(firstName ?? lastName ?? nickName);
+
+        //위는 사용자의 성이 있으면 성으로, 없으면 이름으로, 그것도 없으면 별명으로 이름을 출력하게 하였다.
+        //위와 같이 작성하면 빈 값으로 두지 않을 수 있다는 장점이 있다.
+        //첫 번째 정의된(defined) 값을 반환한다는 점에서 ||(or)과 다르므로 유의하자. 
+        //즉 숫자 0의 경우 ||에서는 false로 보고 다음으로 넘어가지만 ??는 정의되어 있다고 보기때문에 
+        //0을 반환한다.
+
+        var height = 0;
+        console.log(height||100); //100
+        console.log(height??100); //0
+
+        
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

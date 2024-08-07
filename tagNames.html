@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // var inputs = document.getElementsByTagName("input");
+            // for (var input of inputs) {
+            //     if (input.checked) alert(input.value) 
+            // }
+            var inputs = document.getElementsByTagName("age");
+            for (var input of inputs) {
+                if (input.checked) alert(input.value) 
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <td>나이:</td>
+            <td>
+                <label for="">
+                    <input type="radio" name="age" value="young" > 18세 미만
+                </label>
+                <label for="">
+                    <input type="radio" name="age" value="mature" checked> 18세 이상, 60세미만
+                </label>
+                <label for="">
+                    <input type="radio" name="age" value="senior" > 60세 이상
+                </label>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

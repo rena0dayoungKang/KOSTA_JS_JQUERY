@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('0'> 1);  //숫자 0으로 바꿔서 처리함. false출력
+        console.log('01' == 1); //true
+        console.log('1' === 1); //false  ===은 타입까지 같아야 한다.
+
+        console.log(true == 1); //true
+        console.log(true == 10); //false
+        console.log(false == 0); //true
+
+        var a = 0;
+        console.log(Boolean(0)); //false
+        var b = '0';
+        console.log(Boolean(b)); //true
+
+        console.log(a==b); //true
+        //a가 숫자이기 때문에 b가 숫자타입으로 형변환이 된다 
+
+
+        console.log(typeof null); //object타입
+        console.log(typeof undefined); //undefined타입
+        console.log(null === undefined); //false
+        console.log(null == undefined); //true : false와 false값의 비교 
+
+        let d = 2**3; //2의 3승
+        console.log(d);
+        let r = 4**(1/2); //4의 (1/2)승 -> 4의 루트 
+        console.log(r);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

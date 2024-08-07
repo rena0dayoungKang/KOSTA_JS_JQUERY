@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func() {
+            console.log("I am a function");
+        }
+        //func();
+
+        var f = func; //f라는 변수에 func 함수명을 넣을 수있다. 함수명도 주소값이다
+        //var f = func(); 가 아님. 이것은 func()함수의 리턴값을 f에 넣는 다는 것.
+        f();
+
+        //익명함수  : 연결된 이름이 없는 함수. 엄청 많이 사용
+        var func2 = function() {
+            console.log("I am a function2");
+        }
+        func2();
+
+
+        //화살표함수 : 
+        var func3 = () => {
+            console.log("I am a function3");
+        }
+        func3();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

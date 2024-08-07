@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            //h1의 글씨색 : 오렌지, 배경 : 빨강, 글자 : From Javascript!
+            //var header = document.querySelector('h1');
+            //쿼리셀렉터는 첫번째껏만 바꿔준다.
+            //h1태그에 id나 class가 없으면 쿼리셀렉터를 사용 
+            //id나 class이름이 있으면 getElementById사용
+            
+            var header = document.querySelectorAll('h1');
+            //h1은 3개이므로 querySelectorAll은 header 배열일 것
+            for (var h of header) {
+                h.style.color = 'orange';
+                h.style.backgroundColor = 'red';
+                h.innerHTML = "From Javascript!";
+            }
+            header.style.color = 'oragne';
+            header.style.backgroundColor = 'red';
+            header.innerHTML = 'From Javascript!';
+        }
+    </script>
+</head>
+<body>
+    <h1>header</h1>
+    <h1>header</h1>
+    <h1>header</h1>
+</body>
+</html>

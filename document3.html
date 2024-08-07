@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //getElemnt*
+
+        //1.getElementById : 1개 , document로만 호출함.
+        // (ex: document.getElementById('article'))
+        
+        //2.getElementsByTagName : n개
+        // document또는 다른 element를 통해 호출함
+        // (ex: document.getElementsByTagName('article')) 
+        
+        //3.getElementsByClassName : n개
+        // document또는 다른 element를 통해 호출함
+        // (ex: document.getElementsByClassName('article'), form.getElementsByClassName('article'))
+
+        //4.getElementsByName : n개
+        //document또는 다른 element를 통해 호출함
+        // (ex: document.getElementsByName('article'), form.getElementsByName('article'))
+
+        //querySelector* : css의 모든 선택자를 사용할 수 있다. 
+        //1. querySelector
+        // :1개 
+        //        (ex: document.querySelector('ul>li:last-child'), 
+        //              document.querySelector('#article'), 
+        //              document.querySelector('.article')
+
+        //2. queryselectorAll
+        // :n개 
+        //         (ex: document.querySelector('ul>li:last-child')),
+        //              document.querySelector('#article'))
+
+
+        window.onload = function () {
+            //1. document.getElementById
+            let elem = document.getElementById("elem");
+            elem.style.background = 'red';
+            
+
+            let elem_content = document.getElementById("elem-content");
+            elem_content.style.color = 'blue';
+
+            //2. document.getElementsByTagName
+            let ps = document.getElementsByTagName("p");
+            
+            for (let p of ps) {
+                p.style.color = 'aliceblue';
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="elem">
+        <div id="elem-content">Element</div>
+    </div>
+    <h1 id="elem">Header</h1>
+    <!--id는 특정 하나의 엘리먼트에 유일하게 설정 -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At repudiandae iure natus adipisci! Nulla iure nihil, laudantium atque culpa iusto esse ullam cupiditate molestiae aperiam praesentium maiores alias beatae eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus placeat, in ab quo, temporibus accusamus molestiae dolor velit consectetur blanditiis tenetur sunt sed laborum magni beatae. Ratione ab accusantium cupiditate.</p>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeUser(name, age) {
+            return {
+                name,
+                age
+            }
+        }
+        //자바스크립트에서 중괄호는 객체를 의미 : 키 와 값 쌍
+
+        var users = [makeUser('hong', 20), makeUser('song',30)]; //객체배열이 된다.
+        console.log(users);
+
+        //문제
+        var users1 = [makeUser('hong', 20), makeUser('song',30), makeUser('pong',25)];
+        console.log(users1);
+
+        function bublleSort(arr, compare) {
+            for(var i = 0; i < arr.length-1; i++) {
+                for(var j = 0; j < arr.length - i - 1; j++) {
+                    if(compare(arr[j],arr[j+1])>0) {
+                        var temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+        }
+
+        //bublleSort(users1, ?);
+
+        //나이순 정렬
+        var asc = (users1,users2) =>  users1.age - users2.age;
+        bublleSort(users1, asc);
+        console.log(users1);
+
+        for(var idx in users1) { //for in 은 객체 를 위한 것이다.
+            //in 뒤에는 객체 타입이 오는데, 배열타입도 object타입
+            // console.log(user)
+            //순번이 오는 것
+            console.log(users1[idx])
+        }
+
+        for (var user of users1) {
+            //users1에 있는 데이터를 하나씩 user에 넣는 느낌
+            console.log(user)
+        }
+
+
+        var [user1,user2,user3] = users1;
+        //배열에 있는 값을 하나씩 변수에 담기
+        console.log(user1);
+        console.log(user2);
+        console.log(user3);
+
+        //변수배열 
+        var {name,age} = user;
+        var [x,y,z] = [1,2,3];
+        var {n,m} = {n:10, m:100}; 
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
