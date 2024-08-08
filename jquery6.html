@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        let accs = [
+            { id: 1001, name: "홍길동", balance: 1000000, grade: 'VIP' },
+            { id: 1002, name: "김길동", balance: 2000000, grade: 'Gold' },
+            { id: 1003, name: "송길동", balance: 3000000, grade: 'Silver' },
+            { id: 1004, name: "차길동", balance: 4000000, grade: '' },
+            { id: 1005, name: "박길동", balance: 5000000, grade: '' },
+        ]
+
+        $(function() {
+            var tbody = $('table>tbody');
+            accs.map(acc=>{
+                var tr = $('<tr></tr>');
+                
+                var td_id = $('<td></td>');
+                td_id.text(acc.id);
+                
+                var td_name = $('<td></td>');
+                td_name.text(acc.name);
+                
+                var td_balance = $('<td></td>');
+                td_balance.text(acc.balance);
+                
+                var td_grade = $('<td></td>');
+                td_grade.text(acc.grade);
+                
+                var td_btn = $('<td></td>');
+                var delBtn = $('<button>삭제</button>');
+                delBtn.data('id', acc.id);
+                delBtn.addClass('delBtn');
+                td_btn.append(delBtn);
+
+                //1.방식
+                tr.append(td_id);
+                //2.방식
+                //td_id.appendTo(tr);
+                
+                tr.append(td_name);
+                tr.append(td_balance);
+                tr.append(td_grade);
+                tr.append(td_btn);
+
+                tbody.append(tr);
+            })
+
+            $('.delBtn').click(function() {
+                var id = $(this).data('id');
+                alert(id)
+            })
+        })
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>계좌번호</th>
+                <th>이름</th>
+                <th>잔액</th>
+                <th>등급</th>
+                <td>삭제</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

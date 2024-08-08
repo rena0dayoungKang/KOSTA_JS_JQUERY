@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #box {
+            width : 100px; height : 100px;
+            background-color: red;
+
+        }
+
+        #box.hover {
+            background-color: blue;
+            border-radius: 50px;
+        }
+
+        .myclass {
+            border : solid black 1px;
+        }
+    </style>
+    <script>
+        //제이쿼리버전
+        $(function() {
+            $('#box').hover(function() {
+                $('#box').addClass('hover');
+                //마우스가 올라가면 box에 hover라는 클래스명 올라감
+                //근데 구글 게스트모드 계정으로 들어가면 왜 elements에 클래스명이 안올라가지?
+            }, function() {
+                $(this).removeClass('hover');
+                //#box 대신 this를 더 많이 쓰기도 한다. 
+            })
+        }) 
+
+        //자바스크립트 버젼
+        // window.onload = function() {
+        //     var box = document.getElementById('box');
+        //     box.onmouseover = function() {
+        //         //box.setAttribute('class', 'hover');
+        //         box.classList.add('hover'); //클래스명이 안없어지게 해줌. 이런방식을 더 많이 씀
+        //     }
+        //     box.onmouseleave = function() {
+        //         //box.removeAttribute('class');
+        //         box.classList.remove('hover');
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

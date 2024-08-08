@@ -1,0 +1,43 @@
+<!--여러개의 목록에서 다중선택 할 때 컨트롤이나 쉬프트 키를 같이 사용할 때 필요 
+내가 직접 기능을 추가해서 만들고 싶을 때 아래와 같이 가능하다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var elem = document.querySelector('#elem');
+            elem.onclick = function(e) {
+                console.log('click')
+            }
+            elem.onmousedown = function(e) {
+                console.log('mousedown')
+            }
+            elem.onmouseup = function(e) {
+                console.log('mouseup')
+            }
+
+            var text = document.getElementById('text');
+            text.onkeydown = function(e) {
+                console.log('keydown')
+                console.log(e)
+            }
+            text.onkeypress = function(e) {
+                console.log('keypress')
+                console.log(e)
+            }
+
+            text.onkeyup = function(e) {
+                console.log('keyup')
+                console.log(e)
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="elem">클릭</button>
+    <input type="text" id="text">
+</body>
+</html>

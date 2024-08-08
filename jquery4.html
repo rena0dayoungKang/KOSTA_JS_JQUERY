@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        //디스플레이 none을 시키는 효과도 있음
+        $(function() {
+            $('button').click(function() {
+                $('.page').fadeToggle('fast');
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum, iusto eos amet nobis, magnam ea ut aspernatur recusandae omnis, non maiores placeat! Rem itaque nemo sed ex, accusamus perspiciatis?</p>
+    </div>
+    <h1>FadeToggle</h1>
+</body>
+</html>

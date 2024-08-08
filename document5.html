@@ -14,16 +14,27 @@
             { id: 1005, name: "박길동", balance: 5000000, grade: '' },
         ]
         //먼저 배열 형태로 저장함
-        let accstr = accs.map(acc => `<tr><td>${acc.id}</td><td>${acc.name}</td><td>${acc.balance}</td><td>${acc.grade}</td>`)
+        let accstr = accs.map(acc => `<tr><td>${acc.id}</td><td>${acc.name}</td><td>${acc.balance}</td><td>${acc.grade}</td><td><button class='delbtn' data-id='${acc.id}'>삭제</button></td>`)
         let accstrstr = '';
         accstr.forEach(str => {
             accstrstr += str;
         });
+
+        //자바스크립트 버젼
         window.onload = function () {
             let tbody = document.querySelector('table>tbody');
             tbody.innerHTML = accstrstr;
+
+            var delBtns = document.querySelectorAll('.delbtn');
+            for(var btn of delBtns) {
+                btn.onclick = function(e) {
+                    var id = this.getAttribute('data-id');
+                    alert(id);
+                }
+            }
         }
 
+        //제이쿼리버젼 -> jquery5.html
     </script>
 </head>
 
@@ -35,6 +46,7 @@
                 <th>이름</th>
                 <th>잔액</th>
                 <th>등급</th>
+                <td>삭제</td>
             </tr>
         </thead>
         <tbody>

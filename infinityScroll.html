@@ -1,0 +1,33 @@
+<!-- 무한 스크롤 페이지 만들기 (페이지 비율 100%로 해야함) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            var appendDocument = function() {
+                for(var i = 0; i < 20; i++) {
+                    $('<h1>Infinity Scroll</h1>').appendTo($('body'));
+                }
+            }
+
+            appendDocument();
+
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                if(Math.round(scrollTop) == documentHeight - windowHeight) {
+                    appendDocument();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

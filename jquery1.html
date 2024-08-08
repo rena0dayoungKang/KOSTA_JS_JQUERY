@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--        CDN 으로 제이쿼리 버전 3.7.1과 연결하는 링크 복붙         -->
+    <script>
+        
+        //Hello jQuery 창 뜨면 연결이 잘 된 것
+        $(document).ready(function() {
+        //$(function() 으로 축약하기도 한다)
+            alert('Hello jQuery')
+            $('h1').css('color', 'red');
+            $('h1').css('background','black');
+
+            $('img').attr('alt','이미지테스트');
+            $('img').attr('src','고양이2.jpg');
+            $('img').attr('width','200');
+
+        })
+
+        //자바스크립트로 위를 짜려면?
+        // window.onload = function() {
+        //     var h1s = document.querySelectorAll('h1');
+        //     //var h1s = document.getElementsByTagName('h1');
+        //     for (var h1 of h1s) {
+        //         h1.style.color = 'red';
+        //         h1.style.background = 'black';
+        //     }
+        // }
+        
+
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <img>
+</body>
+</html>
